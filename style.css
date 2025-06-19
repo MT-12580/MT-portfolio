@@ -472,6 +472,8 @@ header .navbar {
   padding-top: 80px;
   font-size: 40px;
   color: #00abf0;
+  overflow: visible;
+
   text-shadow: 0 0 30px #00abf0;
 }
 .portfolio p {
@@ -557,11 +559,11 @@ header .navbar {
 .doc-cont {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  row-gap: 20px;
   align-items: center;
   margin: auto;
   justify-items: center;
-  padding: 10px;
+  padding: 30px;
 }
 .head-2 h2 {
   margin-top: 20px;
@@ -618,7 +620,7 @@ header .navbar {
   width: 85%;
   height: auto;
   aspect-ratio: 16/9;
-
+  align-items: center;
   overflow: hidden;
   border-radius: 20px;
   transition: 0.3s;
@@ -626,11 +628,11 @@ header .navbar {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .doc4 {
-  width: 90%;
+  width: 100%;
   height: auto;
   aspect-ratio: 16/9;
 
-  transform: scale(1.25);
+  transform: scale(1.1);
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -1050,7 +1052,7 @@ html {
     margin: 20px auto;
   }
   .reel-cont {
-    overflow: hidden;
+    /* overflow: hidden; */
     gap: 10px;
     padding: 20px 50px;
   }
@@ -1251,7 +1253,7 @@ html {
     margin: 20px auto;
   }
   .reel-cont {
-    overflow: hidden;
+    /* overflow: hidden; */
     gap: 30px;
     padding: 20px 50px;
   }
@@ -1411,8 +1413,10 @@ html {
     font-size: 10px;
   }
   .reel-cont {
+    overflow: visible;
     width: 100%;
     height: 100%;
+    row-gap: 30px;
   }
   .reel-cont .reel1 {
     width: 100%;
@@ -1425,15 +1429,17 @@ html {
   }
   .reel3-cont {
     width: 100%;
-    height: a;
+    height: 55vh;
   }
   .reel3 {
-    width: auto;
-    height: auto;
+    transform: scaleY(1.12);
+    width: 100%;
+    height: 100%;
   }
   .doc-cont {
     height: 100vh;
     padding: 5% 2%;
+    row-gap: 30px;
   }
   .random-cont {
     padding: 5% 7%;
@@ -1442,6 +1448,7 @@ html {
     display: flex;
     flex-direction: column;
     padding: 5% 0;
+    row-gap: 30px;
   }
   .logo-ani1 {
     width: 80%;

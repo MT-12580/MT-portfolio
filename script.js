@@ -35,5 +35,32 @@ menuCloseButton.addEventListener("click",() => menuOpenButton.click
   });
 
 
+
+  document.getElementById("contact-form").addEventListener("submit", async function (e) {
+    e.preventDefault(); // Stop normal form submission
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        window.location.href = "thankyou.html"; // Replace with your actual file path
+      } else {
+        alert("There was an error. Please try again.");
+      }
+    } catch (error) {
+      alert("There was an error sending your message.");
+    }
+  });
+
+
   
 
